@@ -1027,9 +1027,6 @@ static enum AVPixelFormat videotoolbox_best_pixel_format(AVCodecContext *avctx) 
         return AV_PIX_FMT_NV12; // same as av_videotoolbox_alloc_context()
 
     int depth = descriptor->comp[0].depth;
-    if (depth > 8) {
-        return AV_PIX_FMT_P010;
-    }
 
     return AV_PIX_FMT_NV12;
 }
